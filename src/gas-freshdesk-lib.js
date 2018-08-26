@@ -121,7 +121,7 @@ var GasFreshdesk = (function () {
         var requesterId = validateInteger(options.requester_id)
         data = http.get('/api/v2/tickets?order_by=created_at&order_type=asc&requester_id=' + requesterId)
       }else { // Uses the new_and_my_open filter.
-        data = http.get('/api/v2/tickets')
+        data = http.get('/api/v2/tickets?filter=new_and_my_open')
         
       }
       
